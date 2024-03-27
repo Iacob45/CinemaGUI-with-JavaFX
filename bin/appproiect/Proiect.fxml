@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appproiect.ProiectController">
+   <children>
+      <TabPane layoutX="16.0" layoutY="14.0" prefHeight="553.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab_Movies" text="Movies">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="46.0" text="Datele din tabela movies" />
+                        <Button fx:id="buton_IncarcareMovies" layoutX="676.0" layoutY="42.0" mnemonicParsing="false" onAction="#incarcaMovies" text="Incarcare movies" />
+                        <TableView fx:id="tabela_Movies" layoutX="14.0" layoutY="75.0" prefHeight="436.0" prefWidth="774.0">
+                          <columns>
+                            <TableColumn fx:id="atribut_id_movie" prefWidth="75.0" text="id_movie" />
+                            <TableColumn fx:id="atribut_name_movie" prefWidth="152.80006408691406" text="movie name" />
+                              <TableColumn fx:id="atribut_length" prefWidth="142.39996337890625" text="length" />
+                              <TableColumn fx:id="atribut_director" prefWidth="136.0" text="director" />
+                              <TableColumn fx:id="atribut_rating" prefWidth="85.60003662109375" text="rating" />
+                              <TableColumn fx:id="atribut_genre" prefWidth="80.79998779296875" text="genre" />
+                              <TableColumn fx:id="atribut_launch_date" prefWidth="100.800048828125" text="launch date" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_Locations" text="Locations">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="42.0" text="Datele din tabela locations" />
+                        <Button fx:id="buton_IncarcareLocations" layoutX="640.0" layoutY="38.0" mnemonicParsing="false" onAction="#incarcaLocations" text="Incarcare locations" />
+                        <TableView fx:id="tabela_Locations" layoutX="14.0" layoutY="74.0" prefHeight="441.0" prefWidth="774.0">
+                          <columns>
+                            <TableColumn fx:id="atribut_id_location" prefWidth="75.0" text="idlocations" />
+                            <TableColumn fx:id="atribut_name_location" prefWidth="167.2000274658203" text="name location" />
+                              <TableColumn fx:id="atribut_phone_number" prefWidth="160.0" text="phone number" />
+                              <TableColumn fx:id="atribut_city" prefWidth="132.79998779296875" text="city" />
+                              <TableColumn fx:id="atribut_adress" prefWidth="240.800048828125" text="adress" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_Screenings" text="Screenings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              		<children>
+              		<Label layoutX="14.0" layoutY="42.0" text="Datele din tabela screenings" />
+              		<Button fx:id="buton_IncarcareScreenings" layoutX="656.0" layoutY="38.0" mnemonicParsing="false" onAction="#incarcaScreenings" text="Incarcare screenings" />
+              		<TableView fx:id="tabela_Screenings" layoutX="14.0" layoutY="74.0" prefHeight="441.0" prefWidth="774.0">
+                          <columns>
+                            <TableColumn fx:id="atribut_id_screening" prefWidth="113.59997177124023" text="idscreening" />
+                            <TableColumn fx:id="atribut_start_time" minWidth="0.0" prefWidth="239.19996643066406" text="start time" />
+                              <TableColumn fx:id="atribut_ticket_price" prefWidth="143.20001220703125" text="ticket price" />
+                              <TableColumn fx:id="atribut_id_movie2" prefWidth="131.20001220703125" text="id movie" />
+                              <TableColumn fx:id="atribut_id_location2" prefWidth="147.20001220703125" text="id location" />
+                          </columns>
+                    </TableView>  
+              		</children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab_AdaugareLocations" text="Adaugare Location">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="164.0" layoutY="22.0" text="Adaugare Location" />
+                        <Label layoutX="33.0" layoutY="62.0" prefHeight="18.0" prefWidth="105.0" text="name location:" />
+                        <Label layoutX="33.0" layoutY="100.0" text="phone number:" />
+                        <Label layoutX="31.0" layoutY="136.0" text="city:" />
+						<Label layoutX="34.0" layoutY="174.0" text="adress:" />
+                        <Button fx:id="buton_AdaugareLocations" layoutX="34.0" layoutY="214.0" mnemonicParsing="false" onAction="#adaugaLocation" text="Adauga" />
+                        <TextField fx:id="controllernamelocation" layoutX="139.0" layoutY="59.0" />
+                        <TextField fx:id="controllerphonenumber" layoutX="139.0" layoutY="132.0" />
+                        <TextField fx:id="controllercity" layoutX="139.0" layoutY="96.0" />
+                        <TextField fx:id="controlleradress" layoutX="139.0" layoutY="170.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tab_AdaugareMovies" text="Adaugare Movie">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="518.0" layoutY="37.0" text="Adaugare Movie" />
+                        <Label layoutX="484.0" layoutY="117.0" prefHeight="18.0" prefWidth="105.0" text="name:" />
+                        <Label layoutX="483.0" layoutY="156.0" text="length:" />
+                        <Label layoutX="484.0" layoutY="200.0" text="director:" />
+						<Label layoutX="484.0" layoutY="240.0" text="rating:" />
+                        <Button fx:id="buton_AdaugareMovies" layoutX="472.0" layoutY="378.0" mnemonicParsing="false" onAction="#adaugaMovie" text="Adauga" />
+                        <TextField fx:id="controllernamemovie" layoutX="601.0" layoutY="114.0" />
+                        <TextField fx:id="controllerlength" layoutX="601.0" layoutY="196.0" />
+                        <TextField fx:id="controllerdirector" layoutX="601.0" layoutY="152.0" />
+                        <TextField fx:id="controllerrating" layoutX="601.0" layoutY="236.0" />
+                        <TextField fx:id="controllergenre" layoutX="602.0" layoutY="282.0" />
+                        <TextField fx:id="controllerlaunchdate" layoutX="603.0" layoutY="326.0" />
+                        <Label layoutX="483.0" layoutY="286.0" text="genre:" />
+                        <Label layoutX="483.0" layoutY="330.0" text="launch date" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tab_AdaugareScreening" text="Adaugare Screening">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="346.0" layoutY="42.0" text="Adaugare Screening" />
+                        <Label layoutX="159.0" layoutY="113.0" prefHeight="18.0" prefWidth="105.0" text="start time:" />
+                        <Label layoutX="159.0" layoutY="152.0" text="ticket price:" />
+                        <Label layoutX="159.0" layoutY="191.0" text="id movie:" />
+                        <Button fx:id="buton_AdaugareScreening" layoutX="154.0" layoutY="275.0" mnemonicParsing="false" onAction="#adaugaScreening" text="Adauga" />
+                        <TextField fx:id="controllerstarttime" layoutX="243.0" layoutY="109.0" />
+                        <TextField fx:id="controllerticketprice" layoutX="243.0" layoutY="148.0" />
+                        <TextField fx:id="controlleridmovie" layoutX="243.0" layoutY="187.0" />
+                        <Label layoutX="155.0" layoutY="233.0" text="id location" />
+                        <TextField fx:id="controlleridlocation" layoutX="244.0" layoutY="229.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tab_StergereTabela" text="Stergere element">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="354.0" layoutY="68.0" text="Stergere element" />
+                        <Label layoutX="121.0" layoutY="126.0" prefHeight="18.0" prefWidth="105.0" text="tabela:" />
+                        <Label layoutX="121.0" layoutY="174.0" text="primary key:" />
+                        <Label layoutX="121.0" layoutY="226.0" text="id:" />
+                        <Button fx:id="buton_StergereTabela" layoutX="121.0" layoutY="269.0" mnemonicParsing="false" onAction="#stergereTabela" text="Sterge" />
+                        <TextField fx:id="controllerTb1" layoutX="233.0" layoutY="123.0" />
+                        <TextField fx:id="controllerID1" layoutX="233.0" layoutY="222.0" />
+                        <TextField fx:id="controllerPK1" layoutX="233.0" layoutY="170.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
